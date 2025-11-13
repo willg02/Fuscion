@@ -1,49 +1,43 @@
 import Link from 'next/link';
+import Section from '../components/ui/Section';
+import Container from '../components/ui/Container';
+import Heading from '../components/ui/Heading';
+import Lead from '../components/ui/Lead';
 
 export default function Framework() {
   return (
     <>
       {/* HEADER */}
-      <section className="section bg-white pt-32">
-        <div className="container-premium max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-semibold mb-6">
+      <Section className="pt-32">
+        <Container className="max-w-4xl text-center">
+          <Heading as="h1" size="display1" align="center" measure="tight" className="mb-6">
             The Framework
-          </h1>
-          <p className="text-xl text-gray-600">
+          </Heading>
+          <Lead align="center" className="text-gray-600 !text-xl">
             The foundation of alignment medicine.
-          </p>
-        </div>
-      </section>
+          </Lead>
+        </Container>
+      </Section>
 
       {/* SCIENCE + STORY */}
-      <section className="section bg-gray-50">
-        <div className="container-premium max-w-4xl">
-          <h2 className="text-4xl font-semibold mb-8 text-center">
-            Science + Story
-          </h2>
+      <Section variant="muted">
+        <Container className="max-w-4xl">
+          <Heading align="center" className="mb-8">Science + Story</Heading>
           <div className="text-center text-lg text-gray-700 leading-relaxed space-y-4">
+            <p>Your biology and your lived experience move together.</p>
+            <p className="text-2xl font-medium text-black pt-4">We reunite them into one clear, aligned picture.</p>
             <p>
-              Your biology and your lived experience move together.
-            </p>
-            <p className="text-2xl font-medium text-black pt-4">
-              We reunite them into one clear, aligned picture.
-            </p>
-            <p>
-              <a href="/framework/science-and-story" className="inline-block mt-4 btn btn-outline text-base">Learn More →</a>
+              <Link href="/framework/science-and-story" className="inline-block mt-4 btn btn-outline text-base">Learn More →</Link>
             </p>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* ALIGNMENT ARCHITECTURE */}
-      <section className="section bg-white">
-        <div className="container-premium max-w-5xl">
-          <h2 className="text-4xl font-semibold mb-12 text-center">
-            Alignment Architecture
-          </h2>
-          <p className="text-xl text-gray-600 text-center mb-12">
-            The three forces we align:
-          </p>
+      <Section>
+        <Container className="max-w-5xl">
+          <Heading align="center" className="mb-12">Alignment Architecture</Heading>
+          <p className="text-xl text-gray-600 text-center mb-12">The three forces we align:</p>
           
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center space-y-4">
@@ -77,21 +71,17 @@ export default function Framework() {
             </div>
           </div>
 
-          <p className="text-2xl font-medium text-center mt-16">
-            When these synchronize, life flows.
-          </p>
+          <p className="text-2xl font-medium text-center mt-16">When these synchronize, life flows.</p>
           <div className="text-center mt-6">
-            <a href="/framework/alignment-architecture" className="btn btn-outline text-base">Learn More →</a>
+            <Link href="/framework/alignment-architecture" className="btn btn-outline text-base">Learn More →</Link>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* PRESENCE METHOD */}
-      <section className="section bg-black text-white">
-        <div className="container-premium max-w-4xl">
-          <h2 className="text-4xl font-semibold mb-12 text-center">
-            Presence Method™
-          </h2>
+      <Section variant="dark">
+        <Container className="max-w-4xl">
+          <Heading align="center" className="mb-12">Presence Method™</Heading>
           
           <div className="space-y-12">
             <div className="text-center space-y-4">
@@ -121,33 +111,21 @@ export default function Framework() {
 
           <div className="mt-16 text-center space-y-4">
             <p className="text-2xl">Simple. Powerful. Transformational.</p>
-            <a href="/framework/presence-method" className="inline-block btn btn-outline text-base">Learn More →</a>
+            <Link href="/framework/presence-method" className="inline-block btn btn-outline text-base">Learn More →</Link>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* CTA */}
-      <section className="section bg-white">
-        <div className="container-premium max-w-3xl text-center">
-          <h2 className="text-4xl font-semibold mb-8">
-            Ready to Experience the Framework?
-          </h2>
+      <Section>
+        <Container className="max-w-3xl text-center">
+          <Heading align="center" className="mb-8">Ready to Experience the Framework?</Heading>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/programs"
-              className="btn btn-primary text-lg"
-            >
-              View Programs →
-            </Link>
-            <Link
-              href="/start"
-              className="btn btn-outline text-lg"
-            >
-              Start Now →
-            </Link>
+            <Link href="/programs" className="btn btn-primary text-lg">View Programs →</Link>
+            <Link href="/start" className="btn btn-outline text-lg">Start Now →</Link>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </>
   );
 }

@@ -1,23 +1,27 @@
 import Link from 'next/link';
+import Section from '../components/ui/Section';
+import Container from '../components/ui/Container';
+import Heading from '../components/ui/Heading';
+import Lead from '../components/ui/Lead';
 
 export default function Programs() {
   return (
     <>
       {/* HEADER */}
-      <section className="section bg-white pt-32">
-        <div className="container-premium max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-semibold mb-6">
+      <Section className="pt-32">
+        <Container className="max-w-4xl text-center">
+          <Heading as="h1" size="display1" align="center" measure="tight" className="mb-6">
             Programs
-          </h1>
-          <p className="text-xl text-gray-600">
+          </Heading>
+          <Lead align="center" className="text-gray-600 !text-xl">
             Premium, personalized paths to alignment.
-          </p>
-        </div>
-      </section>
+          </Lead>
+        </Container>
+      </Section>
 
       {/* PROGRAM 1: 4-WEEK ALIGNMENT */}
-      <section className="section bg-gray-50">
-        <div className="container-premium max-w-5xl">
+      <Section variant="muted">
+        <Container className="max-w-5xl">
           <div className="bg-white p-10 md:p-12 border border-gray-100">
             <div className="mb-8">
               <span className="inline-block px-4 py-1 bg-black text-white text-sm font-medium mb-4">
@@ -65,12 +69,12 @@ export default function Programs() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* PROGRAM 2: 1:1 SESSIONS */}
-      <section className="section bg-white">
-        <div className="container-premium max-w-5xl">
+      <Section>
+        <Container className="max-w-5xl">
           <div className="bg-gray-50 p-10 md:p-12 border border-gray-100">
             <div className="mb-8">
               <h2 className="text-4xl font-semibold mb-4">
@@ -111,15 +115,15 @@ export default function Programs() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* CTA SECTION */}
-      <section className="section bg-black text-white">
-        <div className="container-premium max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+      <Section variant="dark">
+        <Container className="max-w-3xl text-center">
+          <Heading align="center" size="display2" className="mb-6">
             Not Sure Which Program Is Right for You?
-          </h2>
+          </Heading>
           <p className="text-lg text-gray-300 mb-8">
             Let's talk. We'll help you find the best path to alignment.
           </p>
@@ -129,8 +133,8 @@ export default function Programs() {
           >
             Get Started →
           </Link>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </>
   );
 }

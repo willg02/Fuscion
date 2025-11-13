@@ -1,23 +1,27 @@
 import Link from 'next/link';
+import Section from '../components/ui/Section';
+import Container from '../components/ui/Container';
+import Heading from '../components/ui/Heading';
+import Lead from '../components/ui/Lead';
 
 export default function HowItWorks() {
   return (
     <>
       {/* INTRO */}
-      <section className="section bg-white pt-32">
-        <div className="container-premium max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-semibold mb-6">
+      <Section className="pt-32">
+        <Container className="max-w-4xl text-center">
+          <Heading as="h1" size="display1" align="center" measure="tight" className="mb-6">
             The Path to Alignment
-          </h1>
-          <p className="text-xl text-gray-600">
+          </Heading>
+          <Lead align="center" className="text-gray-600 !text-xl">
             We guide you through a simple, powerful process designed for clarity, precision, and lasting change.
-          </p>
-        </div>
-      </section>
+          </Lead>
+        </Container>
+      </Section>
 
       {/* STEP 1: ALIGNMENT ASSESSMENT */}
-      <section className="section bg-gray-50">
-        <div className="container-premium max-w-5xl">
+      <Section variant="muted">
+        <Container className="max-w-5xl">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="md:w-1/3">
               <div className="text-6xl font-bold text-gray-200 mb-4">01</div>
@@ -45,12 +49,12 @@ export default function HowItWorks() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* STEP 2: PERSONALIZED PLAN */}
-      <section className="section bg-white">
-        <div className="container-premium max-w-5xl">
+      <Section>
+        <Container className="max-w-5xl">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="md:w-1/3">
               <div className="text-6xl font-bold text-gray-200 mb-4">02</div>
@@ -71,12 +75,12 @@ export default function HowItWorks() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* STEP 3: PRESENCE METHOD */}
-      <section className="section bg-black text-white">
-        <div className="container-premium max-w-5xl">
+      <Section variant="dark">
+        <Container className="max-w-5xl">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="md:w-1/3">
               <div className="text-6xl font-bold text-gray-700 mb-4">03</div>
@@ -98,12 +102,12 @@ export default function HowItWorks() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* STEP 4: LIVE GUIDANCE */}
-      <section className="section bg-white">
-        <div className="container-premium max-w-5xl">
+      <Section>
+        <Container className="max-w-5xl">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="md:w-1/3">
               <div className="text-6xl font-bold text-gray-200 mb-4">04</div>
@@ -121,31 +125,19 @@ export default function HowItWorks() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* CTA */}
-      <section className="section bg-gray-50">
-        <div className="container-premium max-w-3xl text-center">
-          <h2 className="text-4xl font-semibold mb-8">
-            Ready to Begin Your Alignment Journey?
-          </h2>
+      <Section variant="muted">
+        <Container className="max-w-3xl text-center">
+          <Heading align="center" className="mb-8">Ready to Begin Your Alignment Journey?</Heading>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/programs"
-              className="btn btn-primary text-lg"
-            >
-              View Programs →
-            </Link>
-            <Link
-              href="/start"
-              className="btn btn-outline text-lg"
-            >
-              Start Now →
-            </Link>
+            <Link href="/programs" className="btn btn-primary text-lg">View Programs →</Link>
+            <Link href="/start" className="btn btn-outline text-lg">Start Now →</Link>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </>
   );
 }

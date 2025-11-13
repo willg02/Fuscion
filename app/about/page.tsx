@@ -1,20 +1,24 @@
 import Link from 'next/link';
+import Section from '../components/ui/Section';
+import Container from '../components/ui/Container';
+import Heading from '../components/ui/Heading';
+import Lead from '../components/ui/Lead';
 
 export default function About() {
   return (
     <>
       {/* HEADER */}
-      <section className="section bg-white pt-32">
-        <div className="container-premium max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-semibold mb-6">
+      <Section className="pt-32">
+        <Container className="max-w-4xl text-center">
+          <Heading as="h1" size="display1" align="center" className="mb-6" measure="tight">
             Meet Dr. Parag Dalsania
-          </h1>
-        </div>
-      </section>
+          </Heading>
+        </Container>
+      </Section>
 
       {/* BIO SECTION */}
-      <section className="section bg-gray-50">
-        <div className="container-premium max-w-4xl">
+      <Section variant="muted">
+        <Container className="max-w-4xl">
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
             <p>
               Dr. Dalsania is a board-certified physician in <strong>Internal Medicine</strong> and{' '}
@@ -32,15 +36,13 @@ export default function About() {
               This is the art and science of living in alignment.
             </p>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* APPROACH SECTION */}
-      <section className="section bg-white">
-        <div className="container-premium max-w-4xl">
-          <h2 className="text-3xl font-semibold mb-8 text-center">
-            Why This Work Matters
-          </h2>
+      <Section>
+        <Container className="max-w-4xl">
+          <Heading align="center" className="mb-8">Why This Work Matters</Heading>
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
             <p>
               After decades in medicine, Dr. Dalsania recognized a pattern: his most successful patients 
@@ -60,41 +62,34 @@ export default function About() {
               It's alignment medicine — bespoke, intelligent, private.
             </p>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* CREDENTIALS */}
-      <section className="section bg-gray-50">
-        <div className="container-premium max-w-4xl">
-          <h2 className="text-3xl font-semibold mb-8 text-center">
-            Credentials & Training
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-lg text-gray-700">
+      <Section variant="muted">
+        <Container className="max-w-4xl text-center">
+          <Heading className="mb-8" align="center">Credentials & Training</Heading>
+          <ul className="list-disc pl-6 space-y-2 text-lg text-gray-700 text-left inline-block text-start">
             <li>Board Certified in Internal Medicine</li>
             <li>Board Certified in Lifestyle Medicine</li>
             <li>25+ years of clinical practice</li>
             <li>Founder of FUSCION Alignment Medicine</li>
           </ul>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* CTA */}
-      <section className="section bg-black text-white">
-        <div className="container-premium max-w-3xl text-center">
-          <h2 className="text-4xl font-semibold mb-8">
-            Work With Dr. Dalsania
-          </h2>
+      <Section variant="dark">
+        <Container className="max-w-3xl text-center">
+          <Heading align="center" size="display2" className="mb-8">Work With Dr. Dalsania</Heading>
           <p className="text-lg text-gray-300 mb-8">
             Experience personalized alignment medicine designed for your life.
           </p>
-          <Link
-            href="/start"
-            className="btn text-lg bg-white text-black font-medium hover:bg-gray-100"
-          >
+          <Link href="/start" className="btn text-lg bg-white text-black font-medium hover:bg-gray-100">
             Begin Your Alignment →
           </Link>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </>
   );
 }
