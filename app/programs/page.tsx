@@ -56,11 +56,11 @@ export default function Programs() {
               </ul>
             </div>
 
-            <div className="text-center">
-              <Link
-                href="/start"
-                className="btn btn-primary text-lg"
-              >
+            <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/programs/4-week-private-alignment-program" className="btn btn-outline text-lg">
+                View Details →
+              </Link>
+              <Link href="/start" className="btn btn-primary text-lg">
                 Apply to Begin →
               </Link>
             </div>
@@ -102,11 +102,11 @@ export default function Programs() {
               </ul>
             </div>
 
-            <div className="text-center">
-              <Link
-                href="/start"
-                className="btn btn-outline text-lg"
-              >
+            <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/programs/1-1-micro-moment-mastery-sessions" className="btn btn-outline text-lg">
+                View Details →
+              </Link>
+              <Link href="/start" className="btn btn-primary text-lg">
                 Schedule a Session →
               </Link>
             </div>

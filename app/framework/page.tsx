@@ -28,6 +28,9 @@ export default function Framework() {
             <p className="text-2xl font-medium text-black pt-4">
               We reunite them into one clear, aligned picture.
             </p>
+            <p>
+              <a href="/framework/science-and-story" className="inline-block mt-4 btn btn-outline text-base">Learn More →</a>
+            </p>
           </div>
         </div>
       </section>
@@ -77,6 +80,9 @@ export default function Framework() {
           <p className="text-2xl font-medium text-center mt-16">
             When these synchronize, life flows.
           </p>
+          <div className="text-center mt-6">
+            <a href="/framework/alignment-architecture" className="btn btn-outline text-base">Learn More →</a>
+          </div>
         </div>
       </section>
 
@@ -115,6 +121,7 @@ export default function Framework() {
 
           <div className="mt-16 text-center space-y-4">
             <p className="text-2xl">Simple. Powerful. Transformational.</p>
+            <a href="/framework/presence-method" className="inline-block btn btn-outline text-base">Learn More →</a>
           </div>
         </div>
       </section>

@@ -11,7 +11,8 @@ export default function Header() {
     { href: '/how-it-works', label: 'How It Works' },
     { href: '/programs', label: 'Programs' },
     { href: '/framework', label: 'The Framework' },
-    { href: '/about', label: 'About' },
+    { href: '/about', label: 'About Dr. Dalsania' },
+    { href: '/testimonials', label: 'Testimonials' },
     { href: '/faq', label: 'FAQ' },
   ];
 
