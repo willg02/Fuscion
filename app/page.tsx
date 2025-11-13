@@ -9,35 +9,33 @@ export default function Home() {
   return (
     <>
       {/* SECTION 1 — HERO */}
-      <section className="relative overflow-hidden bg-white min-h-[85vh] md:min-h-[90vh] flex items-center justify-center">
+      <Section className="relative overflow-hidden min-h-[85vh] md:min-h-[90vh] flex items-center justify-center">
         {/* Subtle motion element */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[680px] h-[680px] md:w-[820px] md:h-[820px] border border-black/70 rounded-full animate-pulse" 
                style={{ animationDuration: '5s' }} />
         </div>
         
-        <div className="container-premium text-center relative z-10 px-6">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold mb-8 tracking-tight leading-[1.08] balance max-w-5xl mx-auto">
+        <Container className="text-center relative z-10 px-6">
+          <Heading as="h1" size="display1" align="center" measure="tight" className="mb-6 md:mb-8">
             Master Better Health Decisions.
-          </h1>
-          <p className="text-xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed balance">
+          </Heading>
+          <Lead align="center" className="text-gray-600 mb-10 md:mb-12 !text-2xl md:!text-3xl">
             One Intelligent Micro-Moment at a Time.
-          </p>
+          </Lead>
           <Link
             href="/start"
             className="btn btn-primary text-lg px-10 py-4 text-xl shadow-lg hover:shadow-xl transition-shadow"
           >
             Start Your Alignment™ →
           </Link>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* SECTION 2 — WHAT IS FUSCION? */}
-      <section className="section bg-gray-50">
-        <div className="container-premium">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-8 text-center">
-            Where Your Science and Your Story Become One.
-          </h2>
+      <Section variant="muted">
+        <Container>
+          <Heading align="center">Where Your Science and Your Story Become One.</Heading>
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
             <p>
               FUSCION is a private, premium health alignment studio for individuals who want more than 
@@ -52,22 +50,17 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 text-center">
-            <Link
-              href="/how-it-works"
-              className="btn btn-outline"
-            >
+            <Link href="/how-it-works" className="btn btn-outline">
               Learn More About Our Approach →
             </Link>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* SECTION 3 — WHY HIGH-END CLIENTS COME TO US */}
-      <section className="section bg-white">
-        <div className="container-premium">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-16 text-center max-w-3xl mx-auto">
-            Why High-End Clients Come to Us
-          </h2>
+      <Section>
+        <Container>
+          <Heading align="center" className="mb-16 max-w-3xl mx-auto">Why High-End Clients Come to Us</Heading>
           <div className="grid md:grid-cols-3 gap-10 md:gap-16">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold">You Know… But Don't Do.</h3>
@@ -99,15 +92,15 @@ export default function Home() {
               <p className="font-medium">We work 1:1, discreetly, with intention.</p>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* SECTION 4 — THE FUSCION DIFFERENCE */}
-      <section className="section bg-black text-white py-24 md:py-32">
-        <div className="container-premium text-center max-w-5xl">
-          <h2 className="text-4xl md:text-6xl font-semibold mb-8">
+      <Section variant="dark" className="py-24 md:py-32">
+        <Container className="text-center max-w-5xl">
+          <Heading align="center" size="display2" className="mb-8">
             The First Alignment-Based Health System.
-          </h2>
+          </Heading>
           <p className="text-xl text-gray-300 mb-12">
             We integrate three forms of intelligence:
           </p>
@@ -143,15 +136,13 @@ export default function Home() {
             <p>Energy rises.</p>
             <p>Alignment begins.</p>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* SECTION 5 — HOW IT WORKS (TEASER) */}
-      <section className="section bg-white">
-        <div className="container-premium">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-16 text-center">
-            How It Works
-          </h2>
+      <Section>
+        <Container>
+          <Heading align="center" className="mb-16">How It Works</Heading>
           <div className="grid md:grid-cols-3 gap-10 md:gap-16">
             <div className="space-y-4 border-l-4 border-gray-200 pl-6">
               <div className="text-5xl font-bold text-gray-200">01</div>
@@ -179,15 +170,12 @@ export default function Home() {
           </div>
 
           <div className="mt-16 text-center">
-            <Link
-              href="/how-it-works"
-              className="btn btn-outline text-lg"
-            >
+            <Link href="/how-it-works" className="btn btn-outline text-lg">
               See Full Process →
             </Link>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* SECTION 6 — WHO THIS IS FOR */}
       <section className="section bg-gray-50">
