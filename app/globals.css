@@ -41,15 +41,24 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Layout helpers for consistent rhythm */
 .section {
-  padding-top: 5rem;  /* 80px */
-  padding-bottom: 5rem;
+  padding-top: 6rem;  /* 96px */
+  padding-bottom: 6rem;
 }
 
 @media (min-width: 768px) {
-  .section { padding-top: 6rem; padding-bottom: 6rem; }
+  .section { padding-top: 8rem; padding-bottom: 8rem; }
 }
 @media (min-width: 1024px) {
-  .section { padding-top: 7rem; padding-bottom: 7rem; }
+  .section { padding-top: 10rem; padding-bottom: 10rem; }
+}
+
+/* Simple vertical stack utility for consistent intra-section spacing */
+.stack > * + * { margin-top: 1.25rem; }
+@media (min-width: 768px) {
+  .stack > * + * { margin-top: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .stack > * + * { margin-top: 2rem; }
 }
 
 .container-premium {
