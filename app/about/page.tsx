@@ -41,7 +41,7 @@ export default function About() {
           <h2 className="text-3xl font-semibold mb-8 text-center">
             Why This Work Matters
           </h2>
-          <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
             <p>
               After decades in medicine, Dr. Dalsania recognized a pattern: his most successful patients 
               weren't lacking information — they were struggling with implementation.
