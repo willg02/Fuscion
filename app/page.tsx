@@ -4,23 +4,23 @@ export default function Home() {
   return (
     <>
       {/* SECTION 1 — HERO */}
-      <section className="section flex items-center justify-center relative overflow-hidden bg-white min-h-[70vh] md:min-h-[82vh]">
+      <section className="relative overflow-hidden bg-white min-h-[85vh] md:min-h-[90vh] flex items-center justify-center">
         {/* Subtle motion element */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[680px] h-[680px] md:w-[820px] md:h-[820px] border border-black/70 rounded-full animate-pulse" 
                style={{ animationDuration: '5s' }} />
         </div>
         
-        <div className="container-premium text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-semibold mb-6 tracking-tight">
+        <div className="container-premium text-center relative z-10 px-6">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold mb-8 tracking-tight leading-[1.1]">
             Master Better Health Decisions.
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-10">
+          <p className="text-xl md:text-3xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
             One Intelligent Micro-Moment at a Time.
           </p>
           <Link
             href="/start"
-            className="btn btn-primary text-lg"
+            className="btn btn-primary text-lg px-10 py-4 text-xl shadow-lg hover:shadow-xl transition-shadow"
           >
             Start Your Alignment™ →
           </Link>
@@ -39,7 +39,7 @@ export default function Home() {
               information — they want transformation.
             </p>
             <p>
-              We help you close the gap between <strong>what you know</strong> and <strong>how you live</strong>.
+              We help you close the gap between what you know and how you live.
             </p>
             <p>
               Through personalized micro-moment strategies, we help you make better health decisions in real 
@@ -60,6 +60,9 @@ export default function Home() {
       {/* SECTION 3 — WHY HIGH-END CLIENTS COME TO US */}
       <section className="section bg-white">
         <div className="container-premium">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-16 text-center max-w-3xl mx-auto">
+            Why High-End Clients Come to Us
+          </h2>
           <div className="grid md:grid-cols-3 gap-10 md:gap-16">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold">You Know… But Don't Do.</h3>
@@ -95,33 +98,42 @@ export default function Home() {
       </section>
 
       {/* SECTION 4 — THE FUSCION DIFFERENCE */}
-      <section className="section bg-black text-white">
-        <div className="container-premium text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-6">
+      <section className="section bg-black text-white py-24 md:py-32">
+        <div className="container-premium text-center max-w-5xl">
+          <h2 className="text-4xl md:text-6xl font-semibold mb-8">
             The First Alignment-Based Health System.
           </h2>
           <p className="text-xl text-gray-300 mb-12">
             We integrate three forms of intelligence:
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            <div className="space-y-3">
-              <h4 className="text-xl font-semibold">Health Intelligence</h4>
-              <p className="text-gray-300">(biology, labs, physiology)</p>
+          <div className="grid md:grid-cols-3 gap-12 md:gap-16">
+            <div className="space-y-4 text-center">
+              <div className="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-2">
+                <span className="text-2xl">🧬</span>
+              </div>
+              <h4 className="text-xl md:text-2xl font-semibold">Health Intelligence</h4>
+              <p className="text-gray-400 text-base">(biology, labs, physiology)</p>
             </div>
             
-            <div className="space-y-3">
-              <h4 className="text-xl font-semibold">Healing Intelligence</h4>
-              <p className="text-gray-300">(story, meaning, lived experience)</p>
+            <div className="space-y-4 text-center">
+              <div className="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-2">
+                <span className="text-2xl">✨</span>
+              </div>
+              <h4 className="text-xl md:text-2xl font-semibold">Healing Intelligence</h4>
+              <p className="text-gray-400 text-base">(story, meaning, lived experience)</p>
             </div>
             
-            <div className="space-y-3">
-              <h4 className="text-xl font-semibold">Behavioral Intelligence</h4>
-              <p className="text-gray-300">(micro-choices that shape life)</p>
+            <div className="space-y-4 text-center">
+              <div className="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-2">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <h4 className="text-xl md:text-2xl font-semibold">Behavioral Intelligence</h4>
+              <p className="text-gray-400 text-base">(micro-choices that shape life)</p>
             </div>
           </div>
 
-          <div className="mt-12 space-y-2 text-lg">
+          <div className="mt-16 space-y-3 text-xl md:text-2xl font-light">
             <p>When these synchronize, clarity appears.</p>
             <p>Energy rises.</p>
             <p>Alignment begins.</p>
@@ -132,36 +144,39 @@ export default function Home() {
       {/* SECTION 5 — HOW IT WORKS (TEASER) */}
       <section className="section bg-white">
         <div className="container-premium">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-16 text-center">
+            How It Works
+          </h2>
           <div className="grid md:grid-cols-3 gap-10 md:gap-16">
-            <div className="space-y-4">
-              <div className="text-4xl font-bold text-gray-200">01</div>
+            <div className="space-y-4 border-l-4 border-gray-200 pl-6">
+              <div className="text-5xl font-bold text-gray-200">01</div>
               <h3 className="text-2xl font-semibold">The Alignment Assessment</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-relaxed">
                 We map your biology, patterns, blind spots, and goals into one clear picture.
               </p>
             </div>
             
-            <div className="space-y-4">
-              <div className="text-4xl font-bold text-gray-200">02</div>
+            <div className="space-y-4 border-l-4 border-gray-200 pl-6">
+              <div className="text-5xl font-bold text-gray-200">02</div>
               <h3 className="text-2xl font-semibold">The Micro-Moment Strategies</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-relaxed">
                 You receive personalized, real-time decisions that move your life forward.
               </p>
             </div>
             
-            <div className="space-y-4">
-              <div className="text-4xl font-bold text-gray-200">03</div>
+            <div className="space-y-4 border-l-4 border-gray-200 pl-6">
+              <div className="text-5xl font-bold text-gray-200">03</div>
               <h3 className="text-2xl font-semibold">The Presence Method™</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-relaxed">
                 You master the moment between impulse and action — where alignment lives.
               </p>
             </div>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-16 text-center">
             <Link
               href="/how-it-works"
-              className="inline-block px-8 py-3 border-2 border-black text-black hover:bg-black hover:text-white transition-colors"
+              className="btn btn-outline text-lg"
             >
               See Full Process →
             </Link>
@@ -224,30 +239,30 @@ export default function Home() {
       </section>
 
       {/* SECTION 7 — THE PROMISE */}
-      <section className="section bg-white">
-        <div className="container-premium max-w-3xl text-center">
-          <h2 className="text-4xl md:text-6xl font-semibold mb-6">
+      <section className="section bg-gradient-to-b from-white to-gray-50 py-24 md:py-32">
+        <div className="container-premium max-w-4xl text-center">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-6 leading-tight">
             You Don't Need More Information.
           </h2>
-          <h3 className="text-3xl md:text-5xl font-semibold mb-8 text-gray-600">
+          <h3 className="text-3xl md:text-5xl lg:text-6xl font-semibold mb-10 text-gray-600 leading-tight">
             You Need a Way to Live It.
           </h3>
-          <p className="text-xl text-gray-700 leading-relaxed">
-            FUSCION gives you the most intelligent form of accountability —<br />
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            FUSCION gives you the most intelligent form of accountability —<br className="hidden md:block" />
             alignment, one moment at a time.
           </p>
         </div>
       </section>
 
       {/* SECTION 8 — CTA (Footer Hero) */}
-      <section className="section bg-black text-white">
+      <section className="bg-black text-white py-24 md:py-32 mb-0">
         <div className="container-premium max-w-3xl text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-12">
+          <h2 className="text-4xl md:text-6xl font-semibold mb-12 leading-tight">
             Ready to Align Your Life?
           </h2>
           <Link
             href="/start"
-            className="btn text-lg bg-white text-black hover:bg-gray-100 font-medium"
+            className="btn text-xl bg-white text-black hover:bg-gray-100 font-medium px-10 py-4 shadow-xl hover:shadow-2xl transition-shadow"
           >
             Begin Now →
           </Link>
