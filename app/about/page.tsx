@@ -4,8 +4,8 @@ export default function About() {
   return (
     <>
       {/* HEADER */}
-      <section className="pt-32 pb-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="section bg-white pt-32">
+        <div className="container-premium max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-semibold mb-6">
             Meet Dr. Parag Dalsania
           </h1>
@@ -13,8 +13,8 @@ export default function About() {
       </section>
 
       {/* BIO SECTION */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="section bg-gray-50">
+        <div className="container-premium max-w-4xl">
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
             <p>
               Dr. Dalsania is a board-certified physician in <strong>Internal Medicine</strong> and{' '}
@@ -36,8 +36,8 @@ export default function About() {
       </section>
 
       {/* APPROACH SECTION */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="section bg-white">
+        <div className="container-premium max-w-4xl">
           <h2 className="text-3xl font-semibold mb-8 text-center">
             Why This Work Matters
           </h2>
@@ -64,31 +64,23 @@ export default function About() {
       </section>
 
       {/* CREDENTIALS */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="section bg-gray-50">
+        <div className="container-premium max-w-4xl">
           <h2 className="text-3xl font-semibold mb-8 text-center">
             Credentials & Training
           </h2>
-          <div className="space-y-4 text-lg text-gray-700">
-            <p>
-              • Board Certified in Internal Medicine
-            </p>
-            <p>
-              • Board Certified in Lifestyle Medicine
-            </p>
-            <p>
-              • 25+ years of clinical practice
-            </p>
-            <p>
-              • Founder of FUSCION Alignment Medicine
-            </p>
-          </div>
+          <ul className="list-disc pl-6 space-y-2 text-lg text-gray-700">
+            <li>Board Certified in Internal Medicine</li>
+            <li>Board Certified in Lifestyle Medicine</li>
+            <li>25+ years of clinical practice</li>
+            <li>Founder of FUSCION Alignment Medicine</li>
+          </ul>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-black text-white">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="section bg-black text-white">
+        <div className="container-premium max-w-3xl text-center">
           <h2 className="text-4xl font-semibold mb-8">
             Work With Dr. Dalsania
           </h2>
@@ -97,7 +89,7 @@ export default function About() {
           </p>
           <Link
             href="/start"
-            className="inline-block px-10 py-4 bg-white text-black text-lg font-medium hover:bg-gray-100 transition-colors"
+            className="btn text-lg bg-white text-black font-medium hover:bg-gray-100"
           >
             Begin Your Alignment →
           </Link>

@@ -56,8 +56,8 @@ export default function FAQ() {
   return (
     <>
       {/* HEADER */}
-      <section className="pt-32 pb-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="section bg-white pt-32">
+        <div className="container-premium max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-semibold mb-6">
             Frequently Asked Questions
           </h1>
@@ -68,16 +68,17 @@ export default function FAQ() {
       </section>
 
       {/* FAQ LIST */}
-      <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="space-y-4">
+      <section className="section bg-white">
+        <div className="container-premium max-w-3xl">
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-200">
+              <div key={index} className="border border-gray-200 rounded-sm">
                 <button
                   onClick={() => toggleFAQ(index)}
+                  aria-expanded={openIndex === index}
                   className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                 >
-                  <span className="text-lg font-medium pr-8">{faq.question}</span>
+                  <span className="text-lg md:text-xl font-medium pr-8">{faq.question}</span>
                   <span className="text-2xl flex-shrink-0">
                     {openIndex === index ? '−' : '+'}
                   </span>
@@ -94,8 +95,8 @@ export default function FAQ() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="section bg-gray-50">
+        <div className="container-premium max-w-3xl text-center">
           <h2 className="text-3xl font-semibold mb-6">
             Still Have Questions?
           </h2>
@@ -105,13 +106,13 @@ export default function FAQ() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/start"
-              className="inline-block px-8 py-4 bg-black text-white text-lg hover:bg-gray-800 transition-colors"
+              className="btn btn-primary text-lg"
             >
               Get Started →
             </Link>
             <Link
               href="/contact"
-              className="inline-block px-8 py-4 border-2 border-black text-black hover:bg-black hover:text-white transition-colors"
+              className="btn btn-outline text-lg"
             >
               Contact Us
             </Link>

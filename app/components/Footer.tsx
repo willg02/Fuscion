@@ -14,7 +14,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-gray-100 bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="container-premium py-12">
         {/* Logo & Tagline */}
         <div className="mb-8">
           <h3 className="text-2xl font-semibold mb-2">
@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         {/* Navigation Links */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}

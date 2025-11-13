@@ -4,8 +4,8 @@ export default function Contact() {
   return (
     <>
       {/* HEADER */}
-      <section className="pt-32 pb-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="section bg-white pt-32">
+        <div className="container-premium max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-semibold mb-6">
             Contact
           </h1>
@@ -16,9 +16,9 @@ export default function Contact() {
       </section>
 
       {/* CONTACT INFO */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="bg-white p-12 text-center space-y-8">
+      <section className="section bg-gray-50">
+        <div className="container-premium max-w-3xl">
+          <div className="bg-white p-10 md:p-12 border border-gray-100 text-center space-y-8">
             <div>
               <h2 className="text-2xl font-semibold mb-3">General Inquiries</h2>
               <a 
@@ -36,7 +36,7 @@ export default function Contact() {
               </p>
               <Link
                 href="/start"
-                className="inline-block px-8 py-4 bg-black text-white text-lg hover:bg-gray-800 transition-colors"
+                className="btn btn-primary text-lg"
               >
                 Get Started →
               </Link>
@@ -46,8 +46,8 @@ export default function Contact() {
       </section>
 
       {/* FAQ REDIRECT */}
-      <section className="py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="section bg-white">
+        <div className="container-premium max-w-3xl text-center">
           <h2 className="text-3xl font-semibold mb-6">
             Have Questions First?
           </h2>
@@ -56,7 +56,7 @@ export default function Contact() {
           </p>
           <Link
             href="/faq"
-            className="inline-block px-8 py-4 border-2 border-black text-black hover:bg-black hover:text-white transition-colors"
+            className="btn btn-outline text-lg"
           >
             View FAQ →
           </Link>

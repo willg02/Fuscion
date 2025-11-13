@@ -4,8 +4,8 @@ export default function Framework() {
   return (
     <>
       {/* HEADER */}
-      <section className="pt-32 pb-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="section bg-white pt-32">
+        <div className="container-premium max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-semibold mb-6">
             The Framework
           </h1>
@@ -16,8 +16,8 @@ export default function Framework() {
       </section>
 
       {/* SCIENCE + STORY */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="section bg-gray-50">
+        <div className="container-premium max-w-4xl">
           <h2 className="text-4xl font-semibold mb-8 text-center">
             Science + Story
           </h2>
@@ -33,8 +33,8 @@ export default function Framework() {
       </section>
 
       {/* ALIGNMENT ARCHITECTURE */}
-      <section className="py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="section bg-white">
+        <div className="container-premium max-w-5xl">
           <h2 className="text-4xl font-semibold mb-12 text-center">
             Alignment Architecture
           </h2>
@@ -81,8 +81,8 @@ export default function Framework() {
       </section>
 
       {/* PRESENCE METHOD */}
-      <section className="py-24 bg-black text-white">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="section bg-black text-white">
+        <div className="container-premium max-w-4xl">
           <h2 className="text-4xl font-semibold mb-12 text-center">
             Presence Method™
           </h2>
@@ -120,21 +120,21 @@ export default function Framework() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="section bg-white">
+        <div className="container-premium max-w-3xl text-center">
           <h2 className="text-4xl font-semibold mb-8">
             Ready to Experience the Framework?
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/programs"
-              className="inline-block px-8 py-4 bg-black text-white text-lg hover:bg-gray-800 transition-colors"
+              className="btn btn-primary text-lg"
             >
               View Programs →
             </Link>
             <Link
               href="/start"
-              className="inline-block px-8 py-4 border-2 border-black text-black hover:bg-black hover:text-white transition-colors"
+              className="btn btn-outline text-lg"
             >
               Start Now →
             </Link>

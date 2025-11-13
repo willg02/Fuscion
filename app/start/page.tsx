@@ -54,8 +54,8 @@ export default function Start() {
   return (
     <>
       {/* HEADER */}
-      <section className="pt-32 pb-12 bg-white">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="section bg-white pt-32">
+        <div className="container-premium max-w-3xl text-center">
           <h1 className="text-5xl md:text-6xl font-semibold mb-6">
             Start Your Alignment
           </h1>
@@ -66,8 +66,8 @@ export default function Start() {
       </section>
 
       {/* FORM */}
-      <section className="pb-24 bg-white">
-        <div className="max-w-2xl mx-auto px-6">
+      <section className="section bg-white pt-0">
+        <div className="container-premium max-w-2xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -167,7 +167,7 @@ export default function Start() {
             <div className="pt-4">
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-black text-white text-lg font-medium hover:bg-gray-800 transition-colors"
+                className="w-full btn btn-primary text-lg"
               >
                 Submit Application →
               </button>
@@ -181,8 +181,8 @@ export default function Start() {
       </section>
 
       {/* WHAT TO EXPECT */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="section bg-gray-50">
+        <div className="container-premium max-w-4xl">
           <h2 className="text-3xl font-semibold mb-12 text-center">
             What to Expect Next
           </h2>
