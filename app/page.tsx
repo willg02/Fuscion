@@ -12,10 +12,10 @@ export default function Home() {
         </div>
         
         <div className="container-premium text-center relative z-10 px-6">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold mb-8 tracking-tight leading-[1.1]">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold mb-8 tracking-tight leading-[1.08] balance max-w-5xl mx-auto">
             Master Better Health Decisions.
           </h1>
-          <p className="text-xl md:text-3xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed balance">
             One Intelligent Micro-Moment at a Time.
           </p>
           <Link
@@ -241,13 +241,13 @@ export default function Home() {
       {/* SECTION 7 — THE PROMISE */}
       <section className="section bg-gradient-to-b from-white to-gray-50">
         <div className="container-premium max-w-4xl text-center">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-4 md:mb-6 leading-tight">
+          <h2 className="display-1 balance mb-4 md:mb-6 mx-auto measure-tight">
             You Don't Need More Information.
           </h2>
-          <h3 className="text-3xl md:text-5xl lg:text-6xl font-semibold mb-6 md:mb-8 text-gray-700 leading-tight">
+          <h3 className="display-2 balance mb-6 md:mb-8 text-gray-700 mx-auto measure-tight">
             You Need a Way to Live It.
           </h3>
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="lead leading-relaxed mx-auto measure">
             FUSCION gives you the most intelligent form of accountability —<br className="hidden md:block" />
             alignment, one moment at a time.
           </p>
@@ -255,14 +255,14 @@ export default function Home() {
       </section>
 
       {/* SECTION 8 — CTA (Footer Hero) */}
-      <section className="bg-gray-900 text-white py-24 md:py-32 border-t border-gray-800">
+      <section className="bg-slate-900 text-white py-24 md:py-32 border-t border-slate-800">
         <div className="container-premium max-w-3xl text-center">
           <h2 className="text-4xl md:text-6xl font-semibold mb-10 md:mb-12 leading-tight">
             Ready to Align Your Life?
           </h2>
           <Link
             href="/start"
-            className="btn text-xl bg-white text-black hover:bg-gray-100 font-medium px-10 py-4 shadow-xl hover:shadow-2xl transition-shadow"
+            className="btn text-xl bg-white text-black hover:bg-gray-100 font-medium px-10 py-4 shadow-lg hover:shadow-xl transition-shadow"
           >
             Begin Now →
           </Link>
