@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FUSCION Website (Next.js)
 
-## Getting Started
+A static Next.js site (App Router + Tailwind) exported for GitHub Pages.
 
-First, run the development server:
+## Local development
 
-```bash
+```powershell
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build (static export)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```powershell
+npm run build
+```
 
-## Learn More
+This uses `next export` via `output: 'export'` and writes to `out/`.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy to GitHub Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Push to `main` in the repo `willg02/Fuscion`. The workflow `.github/workflows/deploy.yml` will:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Install dependencies
+- Build and export
+- Publish `out/` to GitHub Pages
 
-## Deploy on Vercel
+Preview URL: `https://willg02.github.io/Fuscion/`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If switching to a custom domain later, set the `BASE_PATH` and `ASSET_PREFIX` env vars to empty in the workflow.
