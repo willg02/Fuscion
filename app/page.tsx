@@ -33,7 +33,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-semibold mb-8 text-center">
             Where Your Science and Your Story Become One.
           </h2>
-          <div className="space-y-6 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          <div className="space-y-6 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
             <p>
               FUSCION is a private, premium health alignment studio for individuals who want more than 
               information — they want transformation.
