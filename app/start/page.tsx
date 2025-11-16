@@ -9,9 +9,12 @@ export default function Start() {
     email: '',
     phone: '',
     programInterest: '',
-    message: ''
+    message: '',
+    company: '' // honeypot
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -20,11 +23,47 @@ export default function Start() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, this would send to an API endpoint
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
+    setError(null);
+
+    // Honeypot check: if filled, treat as spam and pretend success
+    if (formData.company && formData.company.trim().length > 0) {
+      setSubmitted(true);
+      return;
+    }
+
+    try {
+      setSubmitting(true);
+      const res = await fetch('https://formspree.io/f/mwpanpnb', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          programInterest: formData.programInterest,
+          message: formData.message,
+          _subject: `New Start Inquiry — ${formData.firstName} ${formData.lastName}`,
+          page: typeof window !== 'undefined' ? window.location.href : 'start-page'
+        })
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await res.json().catch(() => null);
+        setError(data?.error || 'There was an issue sending your message. Please email hello@fuscion.com.');
+      }
+    } catch (err) {
+      setError('Network error. Please try again or email hello@fuscion.com.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -68,7 +107,20 @@ export default function Start() {
       {/* FORM */}
       <section className="section bg-white pt-0">
         <div className="container-premium max-w-2xl">
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+            {/* Honeypot field */}
+            <div className="hidden">
+              <label htmlFor="company">Company</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                autoComplete="off"
+                tabIndex={-1}
+                value={formData.company}
+                onChange={handleChange}
+              />
+            </div>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="firstName" className="block text-sm font-medium mb-2">
@@ -167,11 +219,16 @@ export default function Start() {
             <div className="pt-4">
               <button
                 type="submit"
-                className="w-full btn btn-primary text-lg"
+                disabled={submitting}
+                className="w-full btn btn-primary text-lg disabled:opacity-60"
               >
-                Submit Application →
+                {submitting ? 'Sending…' : 'Submit Application →'}
               </button>
             </div>
+
+            {error && (
+              <p className="text-sm text-red-600 text-center">{error}</p>
+            )}
 
             <p className="text-sm text-gray-500 text-center">
               By submitting this form, you agree to be contacted by FUSCION regarding your inquiry.
