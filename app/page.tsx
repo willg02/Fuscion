@@ -34,9 +34,9 @@ export default function Home() {
 
       {/* SECTION 2 — WHAT IS FUSCION? */}
       <Section variant="muted">
-        <Container>
-          <Heading align="center">Where Your Science and Your Story Become One.</Heading>
-          <div className="space-y-6 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
+        <Container className="text-center">
+          <Heading align="center" className="mb-8">Where Your Science and Your Story Become One.</Heading>
+          <div className="space-y-6 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
             <p>
               FUSCION is a private, premium health alignment studio for individuals who want more than 
               information — they want transformation.
@@ -49,7 +49,7 @@ export default function Home() {
               time — decisions that create energy, clarity, consistency, and alignment.
             </p>
           </div>
-          <div className="mt-12 text-center">
+          <div className="mt-12">
             <Link href="/how-it-works" className="btn btn-outline">
               Learn More About Our Approach →
             </Link>
